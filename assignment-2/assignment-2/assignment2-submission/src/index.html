@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Load Bootstrap's CSS from the node_modules/ dir. Run `npm install` first -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Helper styles for the Bootstrap table header -->
+    <link rel="stylesheet" href="./styles/bootstrap-header-table.css" />
+    <!-- Your styles can go in src/styles/styles.css -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <title>WEB422 - Assignment 2</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Assignment 2 - Employee Details</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default"></span>
+          </div>
+          <input
+            id="employee-search"
+            placeholder="Search For Employee"
+            type="text"
+            class="form-control"
+            aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container bootstrap-header-table">
+      <div class="row header-row">
+        <div>
+          <div class="col-xs-4 header-column">First Name</div>
+          <div class="col-xs-4 header-column">Last Name</div>
+          <div class="col-xs-4 header-column">Position</div>
+        </div>
+      </div>
+      <div class="row body-rows" id="employees-table"></div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="genericModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.min.js"></script>
+
+    <!-- Include our bundle. Run `npm run parcel` to build the bundle -->
+    <script src="index.js"></script>
+  </body>
+</html>
